@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Google Form</string>
+    <string name="create_your_google_account">إنشاء حساب لك على Google.</string>
+    <string name="first_name">الاسم الاول</string>
+    <string name="last_name">اسم العائلة</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="you_can_user_letters_numbers_amp_periods">يمكنك استخدام الأحرف والأرقام والنقاط</string>
+    <string name="use_my_current_email_address_instead">استخدام عنوان بريدي الإلكتروني الحالي بدلاً من ذلك</string>
+    <string name="password">كلمة المرور</string>
+    <string name="confirm">تأكيد</string>
+    <string name="use_8_or_more_charecters_with_a_mix_of_letters_numbers_amp_symbols">استخدام 8 أحرف أو اكثر باستعمال مزيج من الأحرف والأرقام والرموز</string>
+    <string name="show_password">عرض كلمة المرور</string>
+    <string name="sign_in_instead">تسجيل الدخول بدلاً من ذلك.</string>
+    <string name="next">التالي</string>
+</resources>
