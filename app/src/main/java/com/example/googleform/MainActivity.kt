@@ -3,6 +3,7 @@ package com.example.googleform
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
+import android.text.TextWatcher
 import android.widget.Toast
 import com.example.googleform.databinding.ActivityMainBinding
 
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(MainActivity@ this, "Enter valid first name", Toast.LENGTH_SHORT).show()
             else if (!isValidLastName())
                 Toast.makeText(MainActivity@ this, "Enter valid last name", Toast.LENGTH_SHORT).show()
+            //else if (!isValidEmail())
+                //Toast.makeText(MainActivity@ this, "Enter valid email", Toast.LENGTH_SHORT).show()
             else if (!isValidPassword())
                 Toast.makeText(MainActivity@ this, "Enter valid password", Toast.LENGTH_SHORT).show()
             else
@@ -48,6 +51,16 @@ class MainActivity : AppCompatActivity() {
     //last name validation
     fun isValidLastName(): Boolean {
         return !binding.lastNameEditText.toString().isEmpty()
+    }
+    //email validation
+    fun isValidEmail(): Boolean {
+        var mailInput = binding.usernameEditText.toString().trim()
+
+        return if (mailInput.isEmpty())
+            false
+        else
+            android.util.Patterns.EMAIL_ADDRESS.matcher(mailInput).matches()
+
     }
     //password validation
     fun isValidPassword(): Boolean {
