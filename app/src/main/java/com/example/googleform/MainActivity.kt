@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(MainActivity@ this, "Enter valid first name", Toast.LENGTH_SHORT).show()
             else if (!isValidLastName())
                 Toast.makeText(MainActivity@ this, "Enter valid last name", Toast.LENGTH_SHORT).show()
-            //else if (!isValidEmail())
-                //Toast.makeText(MainActivity@ this, "Enter valid email", Toast.LENGTH_SHORT).show()
+            else if (!isValidUserName())
+                Toast.makeText(MainActivity@ this, "Enter valid email", Toast.LENGTH_SHORT).show()
             else if (!isValidPassword())
                 Toast.makeText(MainActivity@ this, "Enter valid password", Toast.LENGTH_SHORT).show()
             else
@@ -61,6 +61,18 @@ class MainActivity : AppCompatActivity() {
         else
             android.util.Patterns.EMAIL_ADDRESS.matcher(mailInput).matches()
 
+    }
+    //username validation
+    fun isValidUserName(): Boolean {
+        var userName = binding.usernameEditText.text.toString()
+        return if (!userName.isEmpty()) {
+            if (!userName.contains("@gmail.com")) {
+                binding.usernameEditText.setText("$userName@gmail.com")
+            }
+            true
+        }else {
+            false
+        }
     }
     //password validation
     fun isValidPassword(): Boolean {
